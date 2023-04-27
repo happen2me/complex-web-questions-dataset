@@ -52,6 +52,29 @@ may differ from the SPARQL.
 "created": creation time
 ```
 
+NOTE: test set does not contain “answer” field. For test evaluation please send email to 
+alontalmor@mail.tau.ac.il.
+
+
+WEB SNIPPET FILES
+
+
+The snippets files consist of 12,725,989 snippets each containing
+PLEASE DON”T USE CHROME WHEN DOWNLOADING THESE FROM DROPBOX (THE UNZIP COULD FAIL)
+
+"question_ID”: the ID of related question, containing at least 3 instances of the same ID (full question, split1, split2); 
+"question": The natural language complex question; 
+"web_query": Query sent to the search engine. 
+“split_source”: 'noisy supervision split' or ‘ptrnet split’, please train on examples containing “ptrnet split” when comparing to Split+Decomp  from https://arxiv.org/abs/1807.09623
+“split_type”: 'full_question' or ‘split_part1' or ‘split_part2’ please use ‘composition_answer’ in question of type composition and split_type: “split_part1” when training a reading comprehension model on splits as in Split+Decomp  from https://arxiv.org/abs/1807.09623 (in the rest of the cases use the original answer).
+"web_snippets": ~100 web snippets per query. Each snippet includes Title,Snippet. They are ordered according to Google results.
+
+With a total of
+10,035,571 training set snippets
+1,350,950 dev set snippets
+1,339,468 test set snippets
+
+
 ### Source Data
 
 The original files can be found at this [dropbox link](https://www.dropbox.com/sh/7pkwkrfnwqhsnpo/AACuu4v3YNkhirzBOeeaHYala)
